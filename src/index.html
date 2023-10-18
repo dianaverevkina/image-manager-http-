@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image manager</title>
+</head>
+<body>
+  <div class="app">
+    <div class="app__container">
+      <div class="widget">
+        <div class="widget__wrapper">
+          <div class="widget__file-container file-container">
+            <div class="file-container__content">
+              <div class="file-container__img">
+                <img src="./images/upload.png" alt="Drag and drop">
+              </div>
+              <p class="file-container__text-drop"> Drag and Drop here</p>
+              <p>or</p>
+              <div class="file-container__btn btn-add">
+                <span class="btn-add__text">Select file</span>
+              </div>
+            </div>
+            <input name="file" type="file" class="file-container__input" accept="image/png, image/jpeg" multiple>
+          </div>
+        </div>
+      </div>
+
+      <div class="images">
+        <div class="images__container"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

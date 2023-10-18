@@ -1,0 +1,162 @@
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,*:before,*:after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+nav,footer,header,aside{display: block;}
+input,button,textarea{font-family:inherit;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #000;
+    font-weight: 500;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #000;
+    font-weight: 500;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #000;
+    font-weight: 500;
+}
+
+/* caveat-regular - cyrillic_cyrillic-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/caveat-v18-cyrillic_cyrillic-ext-regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/caveat-v18-cyrillic_cyrillic-ext-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/caveat-v18-cyrillic_cyrillic-ext-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('../fonts/caveat-v18-cyrillic_cyrillic-ext-regular.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+       url('../fonts/caveat-v18-cyrillic_cyrillic-ext-regular.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Caveat', sans-serif;
+  font-size: 1.5rem;
+  color: #000;
+  text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.app__container {
+  max-width: 87.5rem;
+  padding: 0 15px 0;
+  margin: 3.125rem auto 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4.375rem;
+  border-radius: 0.625rem;
+}
+
+.file-container {
+  position: relative;
+  max-width: 43.75rem;
+  height: 21.25rem;
+  margin: 0 auto;
+}
+.file-container__content {
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0; margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 11rem;
+  border-radius: 0.26906rem;
+  border: 1.076px dashed rgba(39, 116, 207, 0.3);
+  background: #EEF6FF;
+}
+.file-container__content_hovered{
+  background-color: #d0e2f5;
+}
+.file-container__img {
+  width: 4.6rem;
+  height: 4rem;
+  margin: 1.7rem;
+}
+.file-container__img img {
+  max-width: 100%;
+  object-fit: cover;
+}
+.btn-add {
+  font-size: 1.75rem;
+  color: #4C95EB;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+}
+.btn-add:hover {
+  font-weight: 600;
+}
+
+.file-container__input{
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0; margin: 0;
+  width: 0;
+  height: 0;
+  opacity: 0.1;
+}
+
+.images__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.item {
+  position: relative;
+  flex: 0 1 calc((100% - 150px) / 6);
+}
+
+.item__img {
+  width: 100%;
+  height: 100%;
+}
+
+.item__img-picture {
+  max-width: 100%;
+  min-height: 12.5rem;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.item__delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  width: 1.8rem;
+  height: 1.8rem;
+  box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.3);
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.item__cross {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+
