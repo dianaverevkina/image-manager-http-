@@ -23,7 +23,7 @@ export default class ImageWidget {
   // Загружаем все картинки с сервера
   init() {
     this.imageService.list((response) => {
-      if (response) {
+      if (response.length !== 0) {
         response.files.forEach((img) => {
           const file = new File(img);
           const fileEl = ImageView.renderImgElement(file);
